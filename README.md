@@ -35,17 +35,28 @@ The traditional buffet reservation system involves several challenges:
 **. Software / Hardware required for the implementation**
 
 Hardware Requirements
+
 	RAM: Minimum 4GB or more
+
 	CPU: 2GHz or faster
+
 	Processor: Intel i3 or equivalent or higher
+
 	Hard Disk: Minimum 100GB or more
 
-Software Requirements
-	Operating System:
+**Software Requirements**
+
+**	Operating System:**
+
 •	Any OS on client device.
-	Web server:
+
+**	Web server:**
+
 •	Apache server.
-	Database:
+
+**	Database:**
+
 •	MYSQL.
-	Web browser:
+
+**	Web browser:**
 •	Compatible with all browser.
