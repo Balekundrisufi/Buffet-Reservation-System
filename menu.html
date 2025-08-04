@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>Buffet Kart Menu</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, red, black);
+            padding-top: 100px;
+            margin: 0;
+            font-family: "DM Serif Display", serif;
+        }
+
+        .fix {
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        .top-logo {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightblue;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .brand-ani {
+            font-size: 3rem;
+            font-weight: bold;
+            color: yellow;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .brand-ani::before {
+            content: 'B';
+            animation: changetext 4s infinite;
+        }
+
+        @keyframes changetext {
+            0%, 10% {
+                content: 'B';
+            }
+            11%, 20% {
+                content: 'Bu';
+            }
+            21%, 30% {
+                content: 'Buf';
+            }
+            31%, 40% {
+                content: 'Buff';
+            }
+            41%, 50% {
+                content: 'Buffe';
+            }
+            51%, 60% {
+                content: 'Buffet';
+            }
+            61%, 70% {
+                content: 'BuffetK';
+            }
+            71%, 80% {
+                content: 'BuffetKa';
+            }
+            81%, 90% {
+                content: 'BuffetKar';
+            }
+            91%, 100% {
+                content: 'BuffetKart';
+            }
+        }
+
+        .header {
+            display: flex;
+            padding-left: 5%;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            color: white;
+        }
+
+        a {
+            color: white;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        a:hover {
+            color: yellow;
+        }
+
+        .home:hover {
+            cursor: pointer;
+        }
+		
+		.active {
+            color: yellow;
+        }
+
+        .welcome {
+            width: 500px;
+            font-size: 70px;
+            margin-bottom: 20px;
+            color: gold;
+            text-align: center;
+        }
+
+        #menu {
+            width: 90%;
+            margin: auto;
+            margin-bottom: 70px;
+            border: 2px solid white;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+        }
+
+        .menu-category {
+            margin-bottom: 30px;
+        }
+
+        .menu-category h2 {
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        .menu-item:not(:last-child) {
+            border-bottom: 1px solid white;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        .menu-item h3 {
+            flex: 1;
+            margin: 0 20px;
+        }
+
+        .waiting-style {
+            text-align: center;
+            font-size: 30px;
+            color: gold;
+        }
+
+        .book-now-button {
+            width: 130px;
+            height: 50px;
+            border-radius: 30px;
+            background-color: black;
+            color: white;
+            font-weight: 800;
+        }
+
+        .book-now-button:hover {
+            background-color: lightblue;
+            box-shadow: 0px 0px 10px 1px gray;
+            opacity: 0.9;
+            color: black;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 10px;
+            height: 200px;
+            background-color: yellow;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .footer-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 20px;
+        }
+
+        .copyright {
+            background-color: black;
+            color: white;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="fix">
+    <div class="top-logo">
+        <img class="logo" src="images/hand-fingers-crossed_10416112-removebg-preview.png" alt="logo">
+        <p class="brand-ani"></p>
+    </div>
+    <div class="header">
+        <div class="home" style="flex:1;"><a class="nav-link" href="home_page.html">HOME</a></div>
+        <div class="home" style="flex:1;"><a class="nav-link" href="menu.html">MENUS</a></div>
+        <div class="home" style="flex:1;"><a class="nav-link" href="contact.html">CONTACT US</a></div>
+        <div class="home" style="flex:1;"><a class="nav-link" href="register.php">REGISTER</a></div>
+        <div class="home" style="flex:1;"><a class="nav-link" href="login.php">LOGIN</a></div>
+        <div class="home" style="flex:1;"><a class="nav-link" href="admin/">ADMIN</a></div>
+    </div>
+</div>
+<center>
+    <div class="welcome">
+        WELCOME TO BUFFET KART
+    </div>
+</center>
+<center>
+    <div>
+        <h1>MENUS</h1>
+    </div>
+</center>
+<div id="menu">
+    <div class="menu-category">
+        <h2>Veg</h2>
+        <div class="menu-item">
+            <img src="images/menu4.jpeg" alt="Veg Crispy Tulip">
+            <h3>Veg Crispy Tulip</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/menu29.jpeg" alt="Paneer Roll">
+            <h3>Paneer Roll</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/menu28.jpeg" alt="Mushroom Roll">
+            <h3>Mushroom Roll</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/menu27.jpeg" alt="Chilli Paneer">
+            <h3>Chilli Paneer</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/menu26.jpeg" alt="Vegetable Biryani">
+            <h3>Vegetable Biryani</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/menu25.jpeg" alt="Paneer Butter Masala">
+            <h3>Paneer Butter Masala</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/menu24.jpeg" alt="Aloo Gobi">
+            <h3>Aloo Gobi</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/menu23.jpeg" alt="Bhindi Masala">
+            <h3>Bhindi Masala</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/menu22.jpeg" alt="Dal Makhani">
+            <h3>Dal Makhani</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+            <img src="images/menu21.jpeg" alt="Mix Veg">
+            <h3>Mix Veg</h3>
+            <p>Rs 200</p>
+        </div>
+    </div>
+    <div class="menu-category">
+        <h2>Non-Veg</h2>
+        <div class="menu-item">
+            <img src="images/menu20.jpeg" alt="Chicken Tikka">
+            <h3>Chicken Tikka</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+		    <img src="images/menu19.jpeg" alt="Veg Crispy Tulip">
+            <h3>Chicken Biryani</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu18.jpeg" alt="Veg Crispy Tulip">
+            <h3>Mutton Rogan Josh</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu17.jpeg" alt="Veg Crispy Tulip">
+            <h3>Butter Chicken</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu16.jpeg" alt="Veg Crispy Tulip">
+            <h3>Fish Curry</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu15.jpeg" alt="Veg Crispy Tulip">
+            <h3>Prawn Masala</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu14.jpeg" alt="Veg Crispy Tulip">
+            <h3>Egg Curry</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu13.jpeg" alt="Veg Crispy Tulip">
+            <h3>Chicken Curry</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu12.jpeg" alt="Veg Crispy Tulip">
+            <h3>Chilly Chicken</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu11.jpeg" alt="Veg Crispy Tulip">
+            <h3>Crab Masala</h3>
+            <p>Rs 200</p>
+        </div>
+    </div>
+    <div class="menu-category">
+        <h2>Snacks</h2>
+        <div class="menu-item">
+			<img src="images/menu10.jpeg" alt="Veg Crispy Tulip">
+            <h3>Samosa</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu9.jpeg" alt="Veg Crispy Tulip">
+            <h3>Pav Bhaji</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu8.jpeg" alt="Veg Crispy Tulip">
+            <h3>Schezwan Noodles</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu7.jpeg" alt="Veg Crispy Tulip">
+            <h3>Spring Roll</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu6.jpeg" alt="Veg Crispy Tulip">
+            <h3>Chicken Wings</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu5.jpeg" alt="Veg Crispy Tulip">
+            <h3>French Fries</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu4.jpeg" alt="Veg Crispy Tulip">
+            <h3>Cheese Balls</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu3.jpeg" alt="Veg Crispy Tulip">
+            <h3>Steam Veg Momos</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu2.jpeg" alt="Veg Crispy Tulip">
+            <h3>Nachos</h3>
+            <p>Rs 200</p>
+        </div>
+        <div class="menu-item">
+			<img src="images/menu1.jpeg" alt="Veg Crispy Tulip">
+            <h3>Onion Rings</h3>
+            <p>Rs 200</p>
+        </div>
+    </div>
+</div>
+<div class="waiting-style">
+<p>What are you waiting..!!</p>
+<a href="login.php"><input class="book-now-button" type="submit" value="BOOK NOW"/></a>
+</div>
+<div class="footer">
+<div><img class="footer-logo" src="images/hand-fingers-crossed_10416112-removebg-preview.png" alt="logo"></div>
+<div>Address:<p style="width:190px;">Besides MRF Showroom, Congress Rd, 1st Gate, Tilakwadi, Belagavi, Karnataka 590006</p><p></p></div>
+<div>Reservation:<p><img src="images/callicon.png" width=20px height=15px/> 99539843437</p>
+<p><img src="images/mailicon.svg" width=20px height=15px> buffetkart@gmail.com</p>
+<p><img src="images/mailicon.svg" width=20px height=15px> seatbf@gmail.com</p></div>
+</div>
+
+<div class="copyright">
+    <p>&copy; 2023 Buffet Kart. All Rights Reserved.</p>
+</div>
+<script>
+    // JavaScript to set the active class based on the current page URL
+    const currentLocation = window.location.href;
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        if (link.href === currentLocation) {
+            link.classList.add('active');
+        }
+    });
+</script>
+</body>
+</html>

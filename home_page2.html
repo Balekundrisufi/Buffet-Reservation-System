@@ -1,0 +1,366 @@
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <title>Buffet Kart Menu</title>
+    <style>
+        body {
+            background-image: linear-gradient(to right, red, black);
+            padding-top: 100px;
+            margin: 0;
+            font-family: "DM Serif Display", serif;
+        }
+	
+    .fix{
+		position:fixed;
+		left:0px;
+		right:0px;
+		top:0px;
+		z-index:1;
+	}
+	
+    .top-logo{
+		height:50px;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		background-color:lightblue;
+	}
+		
+	.logo{
+		width:50px;
+		height:50px;
+	}
+	
+	.brand-ani{
+		font-size:3rem;
+		font-weight:bold;
+		color:yellow;
+		font-family:"DM Serif Display", serif;
+		text-shadow: 2px 2px 4px #000000;
+	}
+
+	.brand-ani::before
+	{
+		content:'B';
+		animation:changetext 4s infinite;
+	}
+
+	@keyframes changetext
+	{
+		0%,10%{
+			content:'B';
+		}
+		11%,20%{
+			content:'Bu';
+		}
+		21%,30%{
+			content:'Buf';
+		}
+		31%,40%{
+			content:'Buff';
+		}
+		41%,50%{
+			content:'Buffe';
+		}
+		51%,60%{
+			content:'Buffet';
+		}
+		61%,70%{
+			content:'BuffetK';
+		}
+		71%,80%{
+			content:'BuffetKa';
+		}
+		81%,90%{
+			content:'BuffetKar';
+		}
+		91%,100%{
+			content:'BuffetKart';
+		}
+	}
+
+	.header{
+		display:flex;
+		padding-left: 8%;
+		justify-content:space-evenly;
+		align-items:center;
+		width:100%;
+		height:50px;
+		background-color:black;
+		color:white;
+	}
+	
+	a{
+		color:white;
+		font-weight:800;
+		text-decoration:none;
+		font-size:18px;
+	}
+
+	a:hover{
+		color:yellow;
+	}
+	
+	.home:hover{
+		cursor:pointer;
+	}
+	
+	.active {
+            color: yellow; 
+        }
+
+	.welcome{
+		width:500px;
+		font-size:70px;
+		margin-bottom:20px;
+		color:gold;
+	}
+	
+	.veg-nonveg{
+		display:grid;
+		grid-template-columns:1fr 1fr;
+	}
+	
+	.non-veg,.veg{
+		position:relative;
+	}
+	
+	.veg{
+		position:relative;
+	}
+	
+	.about-us{
+		font-size:50px;
+		text-align:center;
+		margin:0;
+		font-weight:bolder;
+		color:gold;
+	}
+	
+	.about-us-main{
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+		color:white;
+	}
+	
+	.style1{
+		font-size:27px;
+		width:50%;
+		margin-left:5%;
+	}
+	.shadow{
+		box-shadow:0px 0px 8px 5px gray;
+		overflow:hidden; 
+		border-radius:20px;
+	}
+	
+	#size{
+		width:275px;
+		height:183px;
+		border-radius:10%; 
+		position:relative;
+	}
+
+	#size:hover{
+		transform:scale(1.1);
+	}
+	
+	#image-style{
+		margin-top:20px; 
+		border-radius:10%; 
+		overflow:hidden; 
+		position:relative; 
+		left:20%;
+	}
+	
+	.style1{
+		font-size:30px;
+		width:50%;
+		margin-left:5%;
+	}
+	
+	.waiting-style{
+		text-align:center;
+		font-size:30px;
+		color:gold;
+	}
+	
+	.book-now-button{
+		width:130px; 
+		height:50px; 
+		border-radius:30px; 
+		background-color:black; 
+		color:white;
+		font-weight:800;
+	}
+
+	.book-now-button:hover{
+		background-color:lightblue;
+		box-shadow:0px 0px 10px 1px gray; 
+		opacity:0.9;
+		color:black;
+	}
+	
+	.footer{
+		margin-top:10px;
+		height:200px;
+		background-color:gold;
+		display:flex;
+		justify-content:space-around;
+		align-items:center;
+	}
+	
+	.footer-logo{
+		width:100px;
+		height:100px;
+		border-radius:20px;
+	}
+	
+	.copyright{
+		background-color:black; 
+		color:white; 
+		height:50px;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	}
+	</style>
+</head>
+<body>
+<div class="fix">
+<div class="top-logo">
+<img class="logo" src="images/hand-fingers-crossed_10416112-removebg-preview.png" alt="logo">
+<p class="brand-ani"></p>
+</div>
+<div class="header">
+<div class="home" style="flex:1;"><a class="nav-link" href="home_page2.html">HOME</a></div>
+        <div class="home" style="flex:1;"><a class="nav-link" href="menu2.html">MENUS</a></div>
+        <div class="home" style="flex:1;"><a class="nav-link" href="contact2.html">CONTACT US</a></div>
+        <div class="home" style="flex:1;"><a class="nav-link" href="index.php">BOOK SEAT</a></div>
+		<div class="home" style="flex:1;"><a class="nav-link" href="booking_status.php">HISTORY</a></div>
+        <div class="home" style="flex:1;"><a class="nav-link" href="logout.php">LOGOUT</a></div>
+</div>
+</div>
+<center>
+<div class="welcome">
+WELCOME TO BUFFET KART
+</div>
+</center>
+
+<div class="veg-nonveg">
+<div class="veg">
+<img  style="object-fit:cover; width:100%; height:100%;" src="images/veg.jpg">
+<h1 style="position:absolute; font-size:50px; color:white; left:20%; top:60%;">VEGETERION</h1>
+</div>
+<div class="non-veg">
+<img style="object-fit:cover; width:100%; height:100%;" src="images/nonveg.jpg">
+<h1 style="position:absolute; font-size:50px; color:white; right:11%; top:60%;">NON-VEGETERION</h1>
+</div>
+</div>
+<br>
+
+<p class="about-us">ABOUT US</p>
+<hr style="background-color:lightblue; height:6px; width:150px; border-radius:10px;">
+<div class="about-us-main">
+<div class="style1">
+Welcome to Buffet Kart
+<p>At Buffet Kart, we pride ourselves on offering
+a truly exceptional buffet dining experience. 
+Here is what makes our buffet stand out:</p>
+</div>
+<div  style="padding-top:10px; padding-bottom:10px;">
+<div style="overflow:hidden; border-radius:20px;" class="shadow" >
+<img  class="shadow" id="size" src="images/food.jpg" >
+</div>
+<div  class="shadow" id="image-style">
+<img id="size" src="images/food2.jpg" ></div>
+</div>
+</div><br><br>
+
+<div class="about-us-main">
+<div  style="padding-top:10px; padding-bottom:10px;">
+<div style="overflow:hidden; border-radius:20px;" class="shadow">
+<img  class="shadow" id="size" src="images/food3.webp" >
+</div>
+<div  class="shadow" id="image-style">
+<img id="size" src="images/food4.jpg" ></div>
+</div>
+<div class="style1">
+Variety of Cuisines
+<p>Our buffet features a diverse selection of dishes
+from around the world. Whether you're in the mood
+for something spicy, savory, or sweet, you'll find
+plenty of options to satisfy your taste buds.</p>
+</div>
+</div><br><br>
+
+<div class="about-us-main">
+<div class="style1">
+Fresh Ingredients
+<p>We take pride in using fresh, high-quality 
+ingredients in all our dishes. Our commitment
+to quality ensures that every meal is not only
+delicious but also nutritious.</p>
+</div>
+<div style="padding-top:10px; padding-bottom:10px;">
+<div style="overflow:hidden; border-radius:20px;" class="shadow">
+<img  class="shadow" id="size" src="images/food5.jpg" >
+</div>
+<div  class="shadow" id="image-style">
+<img id="size" src="images/food6.jpg" ></div>
+</div>
+</div><br><br>
+
+<div class="about-us-main">
+<div style="padding-top:10px; padding-bottom:10px;">
+<div style="overflow:hidden; border-radius:20px;" class="shadow">
+<img  class="shadow" id="size" src="images/food7.jpg" >
+</div>
+<div  class="shadow" id="image-style">
+<img id="size" src="images/food8.jpg" ></div>
+</div>
+<div class="style1">
+Family-Friendly Atmosphere
+<p>Our buffet is designed to be welcoming for families. 
+With a wide variety of dishes, even the pickiest 
+eaters will find something they love. Our spacious 
+dining area and attentive staff ensure a comfortable
+and enjoyable dining experience for guests of all
+ages.</p>
+</div>
+
+</div><br><br>
+
+<div class="waiting-style">
+<p>What are you waiting..!!</p>
+<a href="index.php"><input class="book-now-button" type="submit" value="BOOK NOW"/></a>
+</div>
+<div class="footer">
+<div><img class="footer-logo" src="images/hand-fingers-crossed_10416112-removebg-preview.png" alt="logo"></div>
+<div>Address:<p style="width:190px;">Besides MRF Showroom, Congress Rd, 1st Gate, Tilakwadi, Belagavi, Karnataka 590006</p><p></p></div>
+<div>Reservation:<p><img src="images/callicon.png" width=20px height=15px/> 99539843437</p>
+<p><img src="images/mailicon.svg" width=20px height=15px> buffetkart@gmail.com</p>
+<p><img src="images/mailicon.svg" width=20px height=15px> seatbf@gmail.com</p></div>
+</div>
+
+<div class="copyright">
+&copy; 2023 Buffet Kart. All Rights Reserved.
+</div>
+<script>
+    // JavaScript to set the active class based on the current page URL
+    const currentLocation = window.location.href;
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        if (link.href === currentLocation) {
+            link.classList.add('active');
+        }
+    });
+</script>
+</body>
+</html>
