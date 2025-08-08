@@ -1,231 +1,129 @@
-[![SWUbanner](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://supportukrainenow.org/)
+Project Title: **Buffet Reservation System**
 
-![PHPMailer](https://raw.github.com/PHPMailer/PHPMailer/master/examples/images/phpmailer.png)
+**1.B. II. Category**
+Web-Based Reservation System
 
-# PHPMailer – A full-featured email creation and transfer class for PHP
+	The project falls under the category of web-based systems, specifically focusing on reservation management for a buffet. It involves functionalities such as user registration, seat booking, slot management, and an admin dashboard for managing bookings.
 
-[![Test status](https://github.com/PHPMailer/PHPMailer/workflows/Tests/badge.svg)](https://github.com/PHPMailer/PHPMailer/actions)
-[![codecov.io](https://codecov.io/gh/PHPMailer/PHPMailer/branch/master/graph/badge.svg?token=iORZpwmYmM)](https://codecov.io/gh/PHPMailer/PHPMailer)
-[![Latest Stable Version](https://poser.pugx.org/phpmailer/phpmailer/v/stable.svg)](https://packagist.org/packages/phpmailer/phpmailer)
-[![Total Downloads](https://poser.pugx.org/phpmailer/phpmailer/downloads)](https://packagist.org/packages/phpmailer/phpmailer)
-[![License](https://poser.pugx.org/phpmailer/phpmailer/license.svg)](https://packagist.org/packages/phpmailer/phpmailer)
-[![API Docs](https://github.com/phpmailer/phpmailer/workflows/Docs/badge.svg)](https://phpmailer.github.io/PHPMailer/)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/PHPMailer/PHPMailer/badge)](https://api.securityscorecards.dev/projects/github.com/PHPMailer/PHPMailer)
+**1.A.III. Overview**
 
-## Features
-- Probably the world's most popular code for sending email from PHP!
-- Used by many open-source projects: WordPress, Drupal, 1CRM, SugarCRM, Yii, Joomla! and many more
-- Integrated SMTP support – send without a local mail server
-- Send emails with multiple To, CC, BCC, and Reply-to addresses
-- Multipart/alternative emails for mail clients that do not read HTML email
-- Add attachments, including inline
-- Support for UTF-8 content and 8bit, base64, binary, and quoted-printable encodings
-- SMTP authentication with LOGIN, PLAIN, CRAM-MD5, and XOAUTH2 mechanisms over SMTPS and SMTP+STARTTLS transports
-- Validates email addresses automatically
-- Protects against header injection attacks
-- Error messages in over 50 languages!
-- DKIM and S/MIME signing support
-- Compatible with PHP 5.5 and later, including PHP 8.2
-- Namespaced to prevent name clashes
-- Much more!
+The Buffet Reservation System is a web-based application designed to streamline the process of reserving seats for a buffet in a hotel or restaurant. It provides an intuitive interface for customers to view available time slots, select the number of seats required, and make reservations online. The system also includes an admin dashboard that allows hotel staff to manage bookings, monitor slot availability, and handle cancellations.
 
-## Why you might need it
-Many PHP developers need to send email from their code. The only PHP function that supports this directly is [`mail()`](https://www.php.net/manual/en/function.mail.php). However, it does not provide any assistance for making use of popular features such as encryption, authentication, HTML messages, and attachments.
+**Key features of the system include:**
 
-Formatting email correctly is surprisingly difficult. There are myriad overlapping (and conflicting) standards, requiring tight adherence to horribly complicated formatting and encoding rules – the vast majority of code that you'll find online that uses the `mail()` function directly is just plain wrong, if not unsafe!
+	User-Friendly Interface: Customers can easily navigate the system to make reservations.
 
-The PHP `mail()` function usually sends via a local mail server, typically fronted by a `sendmail` binary on Linux, BSD, and macOS platforms, however, Windows usually doesn't include a local mail server; PHPMailer's integrated SMTP client allows email sending on all platforms without needing a local mail server. Be aware though, that the `mail()` function should be avoided when possible; it's both faster and [safer](https://exploitbox.io/paper/Pwning-PHP-Mail-Function-For-Fun-And-RCE.html) to use SMTP to localhost.
+	Real-Time Availability: The system provides up-to-date information on seat availability, reducing the risk of overbooking.
 
-*Please* don't be tempted to do it yourself – if you don't use PHPMailer, there are many other excellent libraries that
-you should look at before rolling your own. Try [SwiftMailer](https://swiftmailer.symfony.com/)
-, [Laminas/Mail](https://docs.laminas.dev/laminas-mail/), [ZetaComponents](https://github.com/zetacomponents/Mail), etc.
+	Secure User Management: Users can register, log in, and recover passwords securely through the system.
 
-## License
-This software is distributed under the [LGPL 2.1](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html) license, along with the [GPL Cooperation Commitment](https://gplcc.github.io/gplcc/). Please read [LICENSE](https://github.com/PHPMailer/PHPMailer/blob/master/LICENSE) for information on the software availability and distribution.
+	Admin Dashboard: Admins have the ability to monitor and manage all bookings, ensuring smooth operation.
+The system aims to enhance customer convenience and improve operational efficiency for the hotel or restaurant by automating and digitizing the reservation process.
 
-## Installation & loading
-PHPMailer is available on [Packagist](https://packagist.org/packages/phpmailer/phpmailer) (using semantic versioning), and installation via [Composer](https://getcomposer.org) is the recommended way to install PHPMailer. Just add this line to your `composer.json` file:
+**1.B. Background**
+1.B.I. Introduction of the company
 
-```json
-"phpmailer/phpmailer": "^6.9.1"
-```
+This project is developed as part of a college assignment to simulate the creation of a Buffet Reservation System for a hypothetical hotel. The system is designed to handle seat reservations for buffet services, manage time slots, and allow both customers and administrators to interact with the system efficiently. Although this project is not tied to a real-world company, it is intended to reflect the needs and challenges that such a system would address in a typical hotel environment.
 
-or run
+**Objectives of The System**
 
-```sh
-composer require phpmailer/phpmailer
-```
+The primary objectives of the Buffet Reservation System are:
 
-Note that the `vendor` folder and the `vendor/autoload.php` script are generated by Composer; they are not part of PHPMailer.
+	**Streamline the Reservation Process:**
+•	**Simplified Booking:** Provide an easy-to-use platform for customers to view available time slots, make seat reservations, and cancel bookings if necessary.
+•	**Real-Time Availability:** Ensure that seat availability is updated in real-time, preventing overbooking and managing the allocation of tables efficiently.
+	**Enhance User Experience:**
 
-If you want to use XOAUTH2 authentication, you will also need to add a dependency on the `league/oauth2-client` and appropriate service adapters package in your `composer.json`, or take a look at
-by @decomplexity's [SendOauth2 wrapper](https://github.com/decomplexity/SendOauth2), especially if you're using Microsoft services.
+•	Secure Account Management: Allow users to create accounts, log in securely, and recover passwords when needed. This includes secure password storage using hashing techniques.
+•	Ease of Access: Provide a user-friendly interface that allows customers to manage their reservations with minimal effort.
+	**Efficient Administration:**
 
-Alternatively, if you're not using Composer, you
-can [download PHPMailer as a zip file](https://github.com/PHPMailer/PHPMailer/archive/master.zip), (note that docs and examples are not included in the zip file), then copy the contents of the PHPMailer folder into one of the `include_path` directories specified in your PHP configuration and load each class file manually:
+•	**Booking Oversight**:  Enable hotel administrators to monitor and manage all bookings through a centralized dashboard, ensuring smooth operation and effective customer service.
 
-```php
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+•	Table and Pricing Control: Allow administrators to adjust number of table and pricing dynamically to optimize business operations.
 
-require 'path/to/PHPMailer/src/Exception.php';
-require 'path/to/PHPMailer/src/PHPMailer.php';
-require 'path/to/PHPMailer/src/SMTP.php';
-```
+	**Ensure Data Security and Integrity:**
 
-If you're not using the `SMTP` class explicitly (you're probably not), you don't need a `use` line for the SMTP class. Even if you're not using exceptions, you do still need to load the `Exception` class as it is used internally.
+•	Secure Data Handling: Protect user data through secure authentication processes and ensure that sensitive information is handled appropriately.
 
-## Legacy versions
-PHPMailer 5.2 (which is compatible with PHP 5.0 — 7.0) is no longer supported, even for security updates. You will find the latest version of 5.2 in the [5.2-stable branch](https://github.com/PHPMailer/PHPMailer/tree/5.2-stable). If you're using PHP 5.5 or later (which you should be), switch to the 6.x releases.
+•	Accurate Record-Keeping: Maintain accurate records of bookings, cancellations, and seat availability to ensure reliable service.
+	**Support Offline Payment Model:**
 
-### Upgrading from 5.2
-The biggest changes are that source files are now in the `src/` folder, and PHPMailer now declares the namespace `PHPMailer\PHPMailer`. This has several important effects – [read the upgrade guide](https://github.com/PHPMailer/PHPMailer/tree/master/UPGRADING.md) for more details.
+•	Offline Payment Integration: Focus on an offline payment model where customers pay for their reservations upon arrival, eliminating the need for online payment gateways.
 
-### Minimal installation
-While installing the entire package manually or with Composer is simple, convenient, and reliable, you may want to include only vital files in your project. At the very least you will need [src/PHPMailer.php](https://github.com/PHPMailer/PHPMailer/tree/master/src/PHPMailer.php). If you're using SMTP, you'll need [src/SMTP.php](https://github.com/PHPMailer/PHPMailer/tree/master/src/SMTP.php), and if you're using POP-before SMTP (*very* unlikely!), you'll need [src/POP3.php](https://github.com/PHPMailer/PHPMailer/tree/master/src/POP3.php). You can skip the [language](https://github.com/PHPMailer/PHPMailer/tree/master/language/) folder if you're not showing errors to users and can make do with English-only errors. If you're using XOAUTH2 you will need [src/OAuth.php](https://github.com/PHPMailer/PHPMailer/tree/master/src/OAuth.php) as well as the Composer dependencies for the services you wish to authenticate with. Really, it's much easier to use Composer!
+**Scope of The System**
 
-## A Simple Example
+The scope of the Buffet Reservation System encompasses the following key functionalities and modules, designed to meet the specific requirements of managing buffet reservations efficiently:
 
-```php
-<?php
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+	**User Management:**
 
-//Load Composer's autoloader
-require 'vendor/autoload.php';
+•	Registration and Login: Users can create an account and log in to access the system. This includes secure handling of user credentials with password hashing and session management.
 
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
+•	Password Recovery: Users can recover or reset their passwords through a secure email-based process using PHPMailer.
 
-try {
-    //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.example.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'user@example.com';                     //SMTP username
-    $mail->Password   = 'secret';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+•	Booking History and Management: Users can view their booking history, including current and past reservations, and can cancel their bookings if needed.
 
-    //Recipients
-    $mail->setFrom('from@example.com', 'Mailer');
-    $mail->addAddress('joe@example.net', 'Joe User');     //Add a recipient
-    $mail->addAddress('ellen@example.com');               //Name is optional
-    $mail->addReplyTo('info@example.com', 'Information');
-    $mail->addCC('cc@example.com');
-    $mail->addBCC('bcc@example.com');
+	Reservation Management:
+•	Slot Availability: The system allows users to view available time slots for reservations based on real-time data from the booking database.
+•	Booking Creation: Users can book seats for a selected time slot, specifying the number of seats for adults and children. The system checks availability, calculates the total cost, and confirms the booking.
 
-    //Attachments
-    $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+•	Booking Cancellation: Users can cancel their bookings, with the system updating availability and ensuring that the canceled slots are reopened for other users.
 
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+	**Admin Dashboard:**
 
-    $mail->send();
-    echo 'Message has been sent';
-} catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-}
-```
+•	Booking Monitoring: Admins can monitor all bookings made through the system, ensuring that reservations are managed effectively.
+•	Slot and Pricing Management: Admins have the ability to configure available time slots and adjust pricing based on demand and other factors.
 
-You'll find plenty to play with in the [examples](https://github.com/PHPMailer/PHPMailer/tree/master/examples) folder, which covers many common scenarios including sending through Gmail, building contact forms, sending to mailing lists, and more.
+	**Exclusions:**
 
-If you are re-using the instance (e.g. when sending to a mailing list), you may need to clear the recipient list to avoid sending duplicate messages. See [the mailing list example](https://github.com/PHPMailer/PHPMailer/blob/master/examples/mailing_list.phps) for further guidance.
+•	Online Payment Processing: The system operates on an offline payment model, where users pay upon arrival at the hotel. There is no integration with online payment gateways.
 
-That's it. You should now be ready to use PHPMailer!
+•	User Profile Management: Users do not have detailed profile management options beyond basic account creation, login, and password recovery.
 
-## Localization
-PHPMailer defaults to English, but in the [language](https://github.com/PHPMailer/PHPMailer/tree/master/language/) folder, you'll find many translations for PHPMailer error messages that you may encounter. Their filenames contain [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1) language code for the translations, for example `fr` for French. To specify a language, you need to tell PHPMailer which one to use, like this:
+	**Goals:**
+•	To provide an intuitive and user-friendly interface for customers to make, manage, and cancel buffet reservations.
 
-```php
-//To load the French version
-$mail->setLanguage('fr', '/optional/path/to/language/directory/');
-```
+•	To streamline the reservation process for hotel staff through an efficient admin dashboard (if included).
 
-We welcome corrections and new languages – if you're looking for corrections, run the [Language/TranslationCompletenessTest.php](https://github.com/PHPMailer/PHPMailer/blob/master/test/Language/TranslationCompletenessTest.php) script in the tests folder and it will show any missing translations.
+•	To ensure secure handling of user data and efficient management of seat availability and reservations.
 
-## Documentation
-Start reading at the [GitHub wiki](https://github.com/PHPMailer/PHPMailer/wiki). If you're having trouble, head for [the troubleshooting guide](https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting) as it's frequently updated.
+**Hardware/software used for the development**
 
-Examples of how to use PHPMailer for common scenarios can be found in the [examples](https://github.com/PHPMailer/PHPMailer/tree/master/examples) folder. If you're looking for a good starting point, we recommend you start with [the Gmail example](https://github.com/PHPMailer/PHPMailer/tree/master/examples/gmail.phps).
+**Hardware Requirements**
 
-To reduce PHPMailer's deployed code footprint, examples are not included if you load PHPMailer via Composer or via [GitHub's zip file download](https://github.com/PHPMailer/PHPMailer/archive/master.zip), so you'll need to either clone the git repository or use the above links to get to the examples directly.
+	**RAM:** Minimum 4GB or more
 
-Complete generated API documentation is [available online](https://phpmailer.github.io/PHPMailer/).
+	**CPU:** 2GHz or faster
 
-You can generate complete API-level documentation by running `phpdoc` in the top-level folder, and documentation will appear in the `docs` folder, though you'll need to have [PHPDocumentor](https://www.phpdoc.org) installed. You may find [the unit tests](https://github.com/PHPMailer/PHPMailer/blob/master/test/PHPMailerTest.php) a good reference for how to do various operations such as encryption.
+	**Processor:** Intel i3 or equivalent or higher
 
-If the documentation doesn't cover what you need, search the [many questions on Stack Overflow](https://stackoverflow.com/questions/tagged/phpmailer), and before you ask a question about "SMTP Error: Could not connect to SMTP host.", [read the troubleshooting guide](https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting).
+	**Hard Disk:** Minimum 500GB or more
 
-## Tests
-[PHPMailer tests](https://github.com/PHPMailer/PHPMailer/tree/master/test/) use PHPUnit 9, with [a polyfill](https://github.com/Yoast/PHPUnit-Polyfills) to let 9-style tests run on older PHPUnit and PHP versions.
+**Software Requirements**
 
-[![Test status](https://github.com/PHPMailer/PHPMailer/workflows/Tests/badge.svg)](https://github.com/PHPMailer/PHPMailer/actions)
+	**Coding Languages:**
 
-If this isn't passing, is there something you can do to help?
+•	**Frontend:** HTML, CSS, JavaScript
 
-## Security
-Please disclose any vulnerabilities found responsibly – report security issues to the maintainers privately.
+•	**Backend:** PHP
 
-See [SECURITY](https://github.com/PHPMailer/PHPMailer/tree/master/SECURITY.md) and [PHPMailer's security advisories on GitHub](https://github.com/PHPMailer/PHPMailer/security). 
+	**Database:**
 
-## Contributing
-Please submit bug reports, suggestions, and pull requests to the [GitHub issue tracker](https://github.com/PHPMailer/PHPMailer/issues).
+•	MySQL for data storage and retrieval.
 
-We're particularly interested in fixing edge cases, expanding test coverage, and updating translations.
+	**Code Editor:**
 
-If you found a mistake in the docs, or want to add something, go ahead and amend the wiki – anyone can edit it.
+•	VS Code, Notepad++ for writing and managing code.
 
-If you have git clones from prior to the move to the PHPMailer GitHub organisation, you'll need to update any remote URLs referencing the old GitHub location with a command like this from within your clone:
+	**Server:**
 
-```sh
-git remote set-url upstream https://github.com/PHPMailer/PHPMailer.git
-```
+•	XAMPP (which includes Apache, MySQL, PHP) for local development and testing.
 
-Please *don't* use the SourceForge or Google Code projects any more; they are obsolete and no longer maintained.
+	**Browser:**
 
-## Sponsorship
-Development time and resources for PHPMailer are provided by [Smartmessages.net](https://info.smartmessages.net/), the world's only privacy-first email marketing system.
+•	Chrome, Internet Explorer.
 
-<a href="https://info.smartmessages.net/"><img src="https://www.smartmessages.net/img/smartmessages-logo.svg" width="550" alt="Smartmessages.net privacy-first email marketing logo"></a>
 
-Donations are very welcome, whether in beer 🍺, T-shirts 👕, or cold, hard cash 💰. Sponsorship through GitHub is a simple and convenient way to say "thank you" to PHPMailer's maintainers and contributors – just click the "Sponsor" button [on the project page](https://github.com/PHPMailer/PHPMailer). If your company uses PHPMailer, consider taking part in Tidelift's enterprise support programme.
 
-## PHPMailer For Enterprise
 
-Available as part of the Tidelift Subscription.
 
-The maintainers of PHPMailer and thousands of other packages are working with Tidelift to deliver commercial
-support and maintenance for the open-source packages you use to build your applications. Save time, reduce risk, and
-improve code health, while paying the maintainers of the exact packages you
-use. [Learn more.](https://tidelift.com/subscription/pkg/packagist-phpmailer-phpmailer?utm_source=packagist-phpmailer-phpmailer&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
-
-## Changelog
-See [changelog](changelog.md).
-
-## History
-- PHPMailer was originally written in 2001 by Brent R. Matzelle as a [SourceForge project](https://sourceforge.net/projects/phpmailer/).
-- [Marcus Bointon](https://github.com/Synchro) (`coolbru` on SF) and Andy Prevost (`codeworxtech`) took over the project in 2004.
-- Became an Apache incubator project on Google Code in 2010, managed by Jim Jagielski.
-- Marcus created [his fork on GitHub](https://github.com/Synchro/PHPMailer) in 2008.
-- Jim and Marcus decide to join forces and use GitHub as the canonical and official repo for PHPMailer in 2013.
-- PHPMailer moves to [the PHPMailer organisation](https://github.com/PHPMailer) on GitHub in 2013.
-
-### What's changed since moving from SourceForge?
-- Official successor to the SourceForge and Google Code projects.
-- Test suite.
-- Continuous integration with GitHub Actions.
-- Composer support.
-- Public development.
-- Additional languages and language strings.
-- CRAM-MD5 authentication support.
-- Preserves full repo history of authors, commits, and branches from the original SourceForge project.
